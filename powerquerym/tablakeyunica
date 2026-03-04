@@ -1,5 +1,5 @@
 let
-    // 1. Configuración (Usa tu NUEVO TOKEN generado en Atlassian)
+    // 1. Configuración (Usar TOKEN generado en Atlassian)
     URL         = "https://correoarg.atlassian.net/rest/api/3/search/jql",
     EMAIL       = "",
     API_TOKEN   = "", 
