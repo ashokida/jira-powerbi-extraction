@@ -1,2 +1,2 @@
 # jira-powerbi-extraction
-Extracción automatizada de datos de Jira Cloud para reportes dinámicos en Power BI
+Extracción automatizada de datos de diferentes fuentes (API, MSSQL o estatico embebido) para reportes dinámicos en Power BI
