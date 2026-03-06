@@ -2,10 +2,10 @@
 
 ## 🚀 Contexto de pruebas:
 
-En mi PC instale el Power Bi Desktop RS (versión Septiembre 2024)
-En mi PC instale el Report Server (versión Septiembre 2024)
-Instale el motor de base de datos MSSQL para alojar la base de datos de Report Server
-La base de datos utilizada como origen de datos para el reporte está instalada en un servidor fuera del dominio (No utilizo Analysis Services)
+* En mi PC instale el Power Bi Desktop RS (versión Septiembre 2024)
+* En mi PC instale el Report Server (versión Septiembre 2024)
+* Instale el motor de base de datos MSSQL para alojar la base de datos de Report Server
+* La base de datos utilizada como origen de datos para el reporte está instalada en un servidor fuera del dominio (No utilizo Analysis Services)
 
 
 ### 💻 Entorno de la Solución
