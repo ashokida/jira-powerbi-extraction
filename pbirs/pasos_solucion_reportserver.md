@@ -17,6 +17,50 @@
 * Usuario SQL que se conecta a la base de datos para hacer selects de vistas y obtener los datos del reporte: qsense_reader
 * Nombre del reporte: TableroSiepPBIDesktopRS.pbix
 
+## Lo que funciona:
+* El servicio del motor de base de datos se ejecuta correctamente
+* Las bases de datos ReportServer y ReportServerTempDB se crearon correctamente en B1842ZACW0168
+* Al guardar el reporte para ser publicado en Report Server no dio errores
+
+## Lo configurado:
+* Power Bi Desktop RS
+** Orígenes de datos: Los datos se obtienen de 3 vistas que se encuentran en la base de datos Escrutinio_php por DirectQuery
+
+•	Report Server Configuration Manager
+o	Report Server Connection:
+	Nombre del servidor: B1842ZACW0168
+	Instancia: PBIRS
+o	Cuenta de servicio
+	Usar cuenta integrada: Cuenta de servicio Virtual
+o	Dirección URL del servicio web
+	Directorio Virtual: ReportServer
+	Dirección IP: Todas Asignadas
+	Puerto TCP: 80
+	Certificado HTTPS: (No seleccionado)
+	Direcciones URL: http://B1842ZACW0168/ReportServer
+o	Base de datos
+	Nombre de SQL Server: B1842ZACW0168
+	Nombre de la base de datos: ReportServer
+	Modo del servidor de Informes: Nativo
+	Credencial: Cuenta de servicio
+	Inicio de Sesión: NT Service\PowerBiReporServer
+	Contraseña: ************* (No la puedo ver)
+
+
+o	Dirección URL del Portal Web
+	Directorio Virtual: Reports
+	Direcciones URL: http://B1842ZACW0168/Reports
+
+•	En http://B1842ZACW0168/Reports
+o	En Origen de Datos del reporte TableroSiepPBIDesktopRS
+	Tipo: SQL
+	Cadena de conexión: 10.1.12.232; Escrutinio_php
+	Credenciales:
+•	Tipo de autenticación: Autenticación básica
+•	Nombre de usuario: qsense_reader
+Al probar conexión funciona correctamente
+
+
 
 
 ### 💻 Entorno de la Solución
