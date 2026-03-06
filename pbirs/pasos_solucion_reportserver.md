@@ -45,57 +45,30 @@
     * Credencial: Cuenta de servicio
     * Inicio de Sesión: NT Service\PowerBiReporServer
     * Contraseña: ************* (No la puedo ver)
+  * Dirección URL del Portal Web
+    * Directorio Virtual: Reports
+    * Direcciones URL: http://B1842ZACW0168/Reports
+
+* En http://B1842ZACW0168/Reports
+  * En Origen de Datos del reporte TableroSiepPBIDesktopRS
+    * Tipo: SQL
+    * Cadena de conexión: 10.1.12.232; Escrutinio_php
+    * Credenciales:
+      * Tipo de autenticación: Autenticación básica
+      * Nombre de usuario: qsense_reader
+      Al probar conexión funciona correctamente
+
+## ❌ El Problema
+* Al ingresar desde la web http://B1842ZACW0168/Reports se carga la pagina pero al intentar visualizar el reporte da el error da el siguiente error: "…No se pudo establecer una conexión con el servidor de Analysis Services. Asegúrese de que la cadena de conexión que ha escrito es correcta.: Identificador de la solicitud: a624761b-f782-2415-c615-7310e88b0aa8 Hora: Mon May 05 2025 07:49:09 GMT-0300 (hora estándar de Argentina) Versión del servicio: /powerbi/libs "
+
+## 📃 Lo que necesito
+* Que el reporte se pueda visualizar correctamente en http://B1842ZACW0168/Reports
+* Que otros usuarios de dominio además del mio (CORREO\Ashokiller) puedan visuali-zar el reporte
 
 
-o	Dirección URL del Portal Web
-	Directorio Virtual: Reports
-	Direcciones URL: http://B1842ZACW0168/Reports
-
-•	En http://B1842ZACW0168/Reports
-o	En Origen de Datos del reporte TableroSiepPBIDesktopRS
-	Tipo: SQL
-	Cadena de conexión: 10.1.12.232; Escrutinio_php
-	Credenciales:
-•	Tipo de autenticación: Autenticación básica
-•	Nombre de usuario: qsense_reader
-Al probar conexión funciona correctamente
-
-
-
-
-### 💻 Entorno de la Solución
-* [cite_start]**Versión de Software:** Power BI Desktop RS y Report Server (Septiembre 2024)[cite: 3, 4].
-* [cite_start]**Servidor de Reportes:** `B1842ZACW0168` (Dominio: `CORREO`)[cite: 9, 10].
-* [cite_start]**Origen de Datos:** SQL Server externo (`10.1.12.232`) con base de datos `Escrutinio_php`[cite: 12, 13].
-* [cite_start]**Método de acceso:** DirectQuery mediante usuario SQL `qsense_reader`[cite: 14, 22].
-
-### ❌ El Problema
-[cite_start]Al intentar visualizar el reporte `TableroSiepPBIDesktopRS.pbix` desde el portal web, se presentaba el siguiente error técnico[cite: 15, 54]:
-
-> [cite_start]*"No se pudo establecer una conexión con el servidor de Analysis Services. Asegúrese de que la cadena de conexión que ha escrito es correcta."* [cite: 54]
 
 ### ✅ Solución Aplicada
-[cite_start]Para que el reporte funcione correctamente y sea accesible para otros usuarios, se deben realizar los siguientes pasos[cite: 59]:
 
-1. **Configurar Variable de Entorno:**
-   [cite_start]En el servidor de PBIRS, crear la variable de sistema `PBI_SQL_TRUSTED_SERVERS` e incluir la IP del servidor de datos (`10.1.12.232`) para habilitar la confianza entre servidores[cite: 60, 61].
-
-2. **Permisos de Acceso al Portal:**
-   [cite_start]En `Configuración del sitio` > `Seguridad`, agregar a los usuarios de dominio (NT) que requieren entrar al portal web[cite: 63].
-
-3. **Seguridad del Reporte:**
-   [cite_start]Asignar permisos específicos a los usuarios de dominio dentro de la configuración de seguridad del informe[cite: 64].
-
-4. **Credenciales del Origen de Datos:**
-   [cite_start]Configurar las credenciales de tipo "Autenticación básica" en las opciones del reporte dentro del portal para asegurar la conexión persistente a la base de datos[cite: 65, 50].
-
----
 
 ## 🛠️ Configuración de Referencia (Config Manager)
-[cite_start]Detalles de la instancia utilizada para esta solución[cite: 23]:
-* [cite_start]**Servicio Web:** `http://B1842ZACW0168/ReportServer`[cite: 34].
-* [cite_start]**Portal Web:** `http://B1842ZACW0168/Reports`[cite: 44].
-* [cite_start]**Base de Datos:** `ReportServer` (Modo Nativo)[cite: 37, 38].
-* [cite_start]**Cuenta de Servicio:** Cuenta de servicio Virtual[cite: 28].
 
----
