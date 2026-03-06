@@ -7,6 +7,17 @@
 * Instale el motor de base de datos MSSQL para alojar la base de datos de Report Server
 * La base de datos utilizada como origen de datos para el reporte está instalada en un servidor fuera del dominio (No utilizo Analysis Services)
 
+## 📘 Datos Relevantes:
+* Entorno: Windows
+* El nombre de mi PC: ""
+* Dominio: ""
+* Mi nombre de usuario (Login): ""
+* Servidor de Base de datos que contiene los datos para el reporte: XXX.XXX.XXX.XXX
+* Nombre de la base de datos fuera de dominio: Escrutinio_php
+* Usuario SQL que se conecta a la base de datos para hacer selects de vistas y obtener los datos del reporte: qsense_reader
+* Nombre del reporte: TableroSiepPBIDesktopRS.pbix
+
+
 
 ### 💻 Entorno de la Solución
 * [cite_start]**Versión de Software:** Power BI Desktop RS y Report Server (Septiembre 2024)[cite: 3, 4].
