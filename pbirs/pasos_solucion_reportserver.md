@@ -4,7 +4,7 @@
 
 * En mi PC instale el Power Bi Desktop RS (Instalador: PBIDesktopSetupRS_x64.exe Versión Septiembre 2024)
 * En mi PC instale el Report Server (Instalador: PowerBIReportServer.exe - Versión Septiembre 2024. Deben coincidir version tanto Report Server como PowerBi Desktop RS)
-* Instale el motor de base de datos MSSQL para alojar la base de datos de Report Server
+* Instale el motor de base de datos MSSQL para alojar la base de datos de Report Server (Instalador: SQL2022-SSEI-Dev.exe)
 * La base de datos utilizada como origen de datos para el reporte está instalada en un servidor fuera del dominio (No utilizo Analysis Services)
 
 ## 📘 Datos Relevantes:
